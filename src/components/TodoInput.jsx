@@ -2,7 +2,7 @@
 
 export default function TodoInput({ handleAddTodo, newTodo, setNewTodo }) {
   return (
-    <header>
+    <div className="todolistInput">
       <input
         onChange={(e) => setNewTodo(e.target.value)}
         value={newTodo}
@@ -16,6 +16,6 @@ export default function TodoInput({ handleAddTodo, newTodo, setNewTodo }) {
       >
         Add
       </button>
-    </header>
+    </div>
   );
 }

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -36,7 +38,7 @@ function App() {
 
   return (
     <>
-      <TodoInput
+      <Header
         newTodo={newTodo}
         setNewTodo={setNewTodo}
         handleAddTodo={handleAddTodo}
@@ -46,6 +48,7 @@ function App() {
         handleDeleteTodo={handleDeleteTodo}
         todos={todos}
       />
+      <Footer />
     </>
   );
 }

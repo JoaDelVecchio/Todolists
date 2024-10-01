@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #202124;
+  color: #e5e5e5;
 }
 
 h1,
@@ -12,20 +12,38 @@ h3,
 input,
 button {
   font-family: "Press Start 2P", system-ui;
+  letter-spacing: 1px;
+}
+
+.onamissionContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+}
+
+.onamissionContainer img {
+  width: 150px;
+  height: 150px;
+  clip-path: inset(20px 20px 50px 30px);
+  overflow: hidden;
 }
 
 #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 14px;
-  background: #eff6ff;
-  gap: 14px;
+  padding: 20px;
+  background: #1a1a1a;
+  gap: 16px;
 }
 
-header {
+.todolistInput {
   display: flex;
   align-items: stretch;
+  justify-content: center;
+  gap: 10px;
 }
 
 header,
@@ -33,52 +51,84 @@ header,
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  gap: 14px;
+  gap: 16px;
 }
 
 header input {
   flex: 1;
-  border-radius: 14px;
+  border-radius: 10px;
   outline: none;
   width: 100%;
+  background: #333;
+  color: #e5e5e5;
+  border: 2px solid #444;
+  transition: background 200ms, border 200ms;
+}
+
+header input:focus {
+  background: #444;
+  border-color: #555;
 }
 
 header button {
-  border-radius: 14px;
-  background: transparent;
+  border-radius: 10px;
+  background: #444;
+  color: #e5e5e5;
   transition-duration: 200ms;
   cursor: pointer;
+  border: 2px solid #555;
 }
 
 header button:hover {
-  opacity: 0.7;
+  background: #555;
+  border-color: #666;
+  opacity: 0.85;
 }
 
 header button,
 header input {
   padding: 14px 18px;
-  border: none;
-  outline: none;
-  background: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #e5e5e5;
+  border-top: 2px solid #444;
+  margin-top: auto;
+  font-size: 0.5em;
+}
+
+footer p {
+  margin: 0;
 }
 
 p {
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
 .todoItem {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px;
-  border-radius: 14px;
-  background: white;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #333;
+  color: #e5e5e5;
+  border: 2px solid #444;
+  transition: background 200ms, border 200ms;
+}
+
+.todoItem:hover {
+  background: #444;
+  border-color: #555;
 }
 
 .todoItem p {
@@ -96,10 +146,11 @@ p {
   border: none;
   background: transparent;
   cursor: pointer;
+  color: #e5e5e5;
 }
 
 .actionsContainer button:hover {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 @media (min-width: 640px) {
@@ -109,6 +160,6 @@ p {
   }
 
   p {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 }
