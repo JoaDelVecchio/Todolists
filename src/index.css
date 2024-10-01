@@ -34,7 +34,7 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+
   background: #1a1a1a;
   gap: 16px;
 }
@@ -91,7 +91,9 @@ header input {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   color: #e5e5e5;
   border-top: 2px solid #444;
