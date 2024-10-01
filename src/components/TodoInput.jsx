@@ -1,9 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 
-export default function TodoInput({ handleAddTodo }) {
-  const [newTodo, setNewTodo] = useState("");
-
+export default function TodoInput({ handleAddTodo, newTodo, setNewTodo }) {
   return (
     <header>
       <input

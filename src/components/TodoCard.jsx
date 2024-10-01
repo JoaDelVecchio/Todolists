@@ -1,13 +1,21 @@
 /* eslint-disable react/prop-types */
-export default function TodoCard(props) {
-  const { children } = props;
+export default function TodoCard({
+  children,
+  todoIndex,
+  handleDeleteTodo,
+  handleEditTodo,
+}) {
   return (
     <div>
       <li className="todoItem">
         {children}
         <div className="actionsContainer">
-          <i className="fa-solid fa-trash"></i>
-          <i className="fa-solid fa-pen-to-square"></i>
+          <button onClick={() => handleEditTodo(todoIndex)}>
+            <i className="fa-solid fa-pen-to-square"></i>
+          </button>
+          <button onClick={() => handleDeleteTodo(todoIndex)}>
+            <i className="fa-solid fa-trash"></i>
+          </button>
         </div>
       </li>
     </div>
