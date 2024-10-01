@@ -5,7 +5,7 @@ const Header = (props) => {
     <header>
       <div className="onamissionContainer">
         <h1>ON A MISSION</h1>
-        <img src="./src/assets/logo.png" alt="" />
+        <img src="/logo.png" alt="" />
       </div>
       <TodoInput {...props} />
     </header>
